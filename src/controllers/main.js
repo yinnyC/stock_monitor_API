@@ -1,1 +1,1 @@
-exports.index = (req, res) => res.render('home/homepage');
+exports.index = (req, res) => res.render('homepage');
