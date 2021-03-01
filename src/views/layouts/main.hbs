@@ -13,8 +13,8 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="/">Stock Monitor</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="/">Stock Monitor API</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,14 +29,14 @@
           {{/if}}
         </ul>
 
-        <ul class="nav navbar-nav navbar-right">
+        {{!-- <ul class="nav navbar-nav navbar-right">
           {{#if currentUser}}
           <li><a class="mr-3" href="/logout">Logout</a></li>
           {{else}}
           <li><a class="mr-4" href="/login">Login</a></li>
           <li><a class="mr-3" href="/sign-up">Sign Up</a></li>
           {{/if}}
-        </ul>
+        </ul> --}}
       </div>
     </nav>
   </header>
