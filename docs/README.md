@@ -5,7 +5,7 @@ This is an API which you can create your own watchlist so that you can monitor t
 ## Getting Started
 First thing first, you need to create an account!
 ```
-clone this API
+
 ```
 ## Resources
 
