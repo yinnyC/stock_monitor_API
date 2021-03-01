@@ -5,13 +5,11 @@ const chai = require('chai');
 
 chai.use(chaiHttp);
 
-const should = chai.should();
-
 const server = require('../server');
 
-const User = require('../models/user');
-
 const agent = chai.request.agent(server);
+const should = chai.should();
+const User = require('../models/user');
 
 chai.config.includeStack = true;
 
@@ -26,16 +24,15 @@ after((done) => {
   done();
 });
 
-const SAMPLE_USER_ID = 'aaaaaaaaaaaa'; // 12 byte string
-
 describe('User API endpoints', () => {
   it('should be able to signup', (done) => {
     User.findOneAndRemove({ username: 'testone' }, () => {
       agent
-        .post('/sign-up')
+        .post('/auth/sign-up')
         .send({ username: 'testone', password: 'password' })
         .end((err, res) => {
           console.log(res.body);
+          console.log(err);
           res.should.have.status(200);
           agent.should.have.cookie('nToken');
           done();
@@ -43,7 +40,7 @@ describe('User API endpoints', () => {
     });
   });
   it('should not be able to login if they have not registered', (done) => {
-    agent.post('/login', { email: 'wrong@wrong.com', password: 'nope' }).end((err, res) => {
+    agent.post('/auth/login', { email: 'wrong@wrong.com', password: 'nope' }).end((err, res) => {
       res.status.should.be.equal(401);
       done();
     });
@@ -51,7 +48,7 @@ describe('User API endpoints', () => {
   // login
   it('should be able to login', (done) => {
     agent
-      .post('/login')
+      .post('/auth/login')
       .send({ username: 'testone', password: 'password' })
       .end((err, res) => {
         res.should.have.status(200);
@@ -61,7 +58,7 @@ describe('User API endpoints', () => {
   });
   // logout
   it('should be able to logout', (done) => {
-    agent.get('/logout').end((err, res) => {
+    agent.get('/auth/logout').end((err, res) => {
       res.should.have.status(200);
       agent.should.not.have.cookie('nToken');
       done();
@@ -69,7 +66,7 @@ describe('User API endpoints', () => {
   });
 
   after((done) => {
-    User.deleteMany({ })
+    User.deleteOne({ username: 'testone' })
       .then(() => {
         agent.close();
         done();

@@ -1,5 +1,12 @@
+/* ******************** */
+//        Auth.js       *
+/* ******************** */
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+
+/* ******************** */
+//      Controllers     *
+/* ******************** */
 
 exports.signupUser = (req, res) => {
   // Create User and JWT
@@ -15,6 +22,8 @@ exports.signupUser = (req, res) => {
 };
 
 exports.login = (req, res) => {
+  /* This controller will compare user data
+  and if correct, will create a token in cookie */
   const { username } = req.body;
   const { password } = req.body;
   // Find this user name
@@ -36,7 +45,7 @@ exports.login = (req, res) => {
         });
         // Set a cookie and redirect to root
         res.cookie('nToken', token, { maxAge: 900000, httpOnly: true });
-        res.send({ message: 'Logged in Successfully' });
+        res.send({ message: 'Logged In Successfully' });
       });
     })
     .catch((err) => {
@@ -44,7 +53,9 @@ exports.login = (req, res) => {
     });
 };
 
-exports.logout = (req, res, next)=>{
+exports.logout = (req, res) => {
+  /* This controller will clear the token in Cookie
+  to logout user */
   res.clearCookie('nToken');
-  res.redirect('/');
+  res.send({ message: 'Logged Out Successfully' });
 };

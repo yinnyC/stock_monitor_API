@@ -53,8 +53,8 @@ app.use(expressValidator());
 
 // Routes
 app.use(router);
-app.use(authRoutes);
-app.use(stockRoutes);
+app.use('/auth', authRoutes);
+app.use('/stock', stockRoutes);
 
 // Set db
 require('./data/stock_monitor-db');

@@ -33,4 +33,14 @@ UserSchema.methods.comparePassword = function (password, done) {
   });
 };
 
+UserSchema.pre('findOne', function (next) {
+  this.populate('stocks');
+  next();
+});
+
+UserSchema.pre('find', function (next) {
+  this.populate('stocks');
+  next();
+});
+
 module.exports = mongoose.model('User', UserSchema);
