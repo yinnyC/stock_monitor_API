@@ -38,7 +38,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'hbs');
 app.engine('hbs', hbs({
   layoutsDir: path.join(__dirname, '/views/layouts/'),
-  partialsDir: path.join(__dirname, '/views/partials/'),
   extname: 'hbs',
   defaultLayout: 'main',
 }));
