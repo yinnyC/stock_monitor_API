@@ -28,4 +28,3 @@ jobs:
           PORT: ${{secrets.PORT}}
           SECRET: ${{secrets.SECRET}}
       - run: npm run build --if-present
-      - run: npm test
