@@ -45,17 +45,6 @@ describe('User API endpoints', () => {
       done();
     });
   });
-  // login
-  it('should be able to login', (done) => {
-    agent
-      .post('/auth/login')
-      .send({ username: 'testone', password: 'password' })
-      .end((err, res) => {
-        res.should.have.status(200);
-        agent.should.have.cookie('nToken');
-        done();
-      });
-  });
   // logout
   it('should be able to logout', (done) => {
     agent.get('/auth/logout').end((err, res) => {
