@@ -49,6 +49,31 @@ describe('Stocks API endpoints', function () {
         return done();
       });
   });
+  it('should be able add a stock to user\'s watchlist', (done) => {
+    this.timeout(9000);
+    Stock.estimatedDocumentCount()
+      .then(function (initialDocCount) {
+        agent
+          .post('/stock/addStock')
+          .send(sampleSymbol2)
+          .then(function (res) {
+            Stock.estimatedDocumentCount()
+              .then(function (newDocCount) {
+                expect(res).to.have.status(200);
+                expect(newDocCount).to.be.equal(initialDocCount + 1);
+                done();
+              })
+              .catch(function (err) {
+                console.log(err);
+                done();
+              });
+          })
+          .catch(function (err) {
+            console.log(err);
+            done();
+          });
+      });
+  });
   it('should be able return an updated stock price', (done) => {
     this.timeout(5000);
     agent
