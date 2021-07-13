@@ -24,8 +24,6 @@ jobs:
       - run: npm ci
       - name: Build
         run: npm run build --if-present
-      - name: Test with Mocha & Chai
-        run: npm test
         env:
           MONGODB_URI: ${{secrets.MONGODB_URI}}
           API_KEY: ${{secrets.API_KEY}}
@@ -34,3 +32,7 @@ jobs:
           MONGODB_DBNAME: ${{secrets.MONGODB_DBNAME}}
           MONGODB_PASSWORD: ${{secrets.MONGODB_PASSWORD}}
           MONGODB_USERNAME: ${{secrets.MONGODB_USERNAME}}
+
+#       - name: Test with Mocha & Chai
+#         run: npm test
+        
