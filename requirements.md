@@ -20,12 +20,12 @@
 <tr>
 <td align="left"><strong>⚙️ Deployment</strong></td>
 <td>Project deployed on CapRover using your own domain</td>
-<td align="center"></td>
+<td align="center">✅</td>
 </tr>
 <tr>
 <td align="left"><strong>⚙️ Deployment</strong></td>
 <td>Uptime monitored by FreshPing or another health check service</td>
-<td align="center"></td>
+<td align="center">✅</td>
 </tr>
 <tr>
 <td align="left"><strong>⚙️ CI</strong></td>

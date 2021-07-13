@@ -1,6 +1,6 @@
 FROM node:lts-alpine
 
-LABEL decription="Production image for custom-api"
+LABEL decription="Production image for stock-monitor"
 
 # Create app directory
 WORKDIR /usr/src/app

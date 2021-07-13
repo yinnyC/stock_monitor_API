@@ -1,10 +1,14 @@
 # 📈 stock_monitor_API
 
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yinnyc/stock-monitor/latest) 
+
+[Website Health Check Monitoring](https://statuspage.freshping.io/53939-StockMonitor)
+
 Check out the [API DOCUMENTATION HERE](https://yinnyc.github.io/stock_monitor_API/)
 
 This is an API which you can create your own watchlist so that you can monitor the stock price and have it shown on your wifi-display
 
-👉👉👉 [https://mystock-monitor.herokuapp.com/](https://mystock-monitor.herokuapp.com/)
+👉👉👉 The Deployed Live-site: [http://stock-monitor-api.dev.yin-chang.me/](http://stock-monitor-api.dev.yin-chang.me/)
 
 ## 🔥 Getting Started
 
