@@ -1,6 +1,7 @@
 # 📈 stock_monitor_API
 
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yinnyc/stock-monitor/latest) 
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/yinnyc/stock-monitor/latest)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/yinnyC/stock_monitor_API/Stock-Monitor%20CI/main)
 
 [Website Health Check Monitoring](https://statuspage.freshping.io/53939-StockMonitor)
 

@@ -30,12 +30,12 @@
 <tr>
 <td align="left"><strong>⚙️ CI</strong></td>
 <td>Project includes continuous integration</td>
-<td align="center"></td>
+<td align="center">>✅</td>
 </tr>
 <tr>
 <td align="left"><strong>📝 Docs</strong></td>
 <td><code>README</code> includes <a href="https://shields.io" target="_blank" rel="noopener">badges</a> for image size, build status, and website monitoring</td>
-<td align="center"></td>
+<td align="center">>✅</td>
 </tr>
 <tr>
 <td align="left"><strong>📝 Docs</strong></td>
