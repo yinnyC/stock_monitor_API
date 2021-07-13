@@ -1,6 +1,6 @@
 # 📈 stock_monitor_API
 
-👉👉👉 [https://mystock-monitor.herokuapp.com/](https://mystock-monitor.herokuapp.com/)
+👉👉👉  Check Out The Deployed Live-site Here: [http://stock-monitor-api.dev.yin-chang.me/](http://stock-monitor-api.dev.yin-chang.me/)
 
 This is an API which you can create your own watchlist so that you can monitor the stock price and have it shown on your wifi-display
 
